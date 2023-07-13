@@ -2,9 +2,7 @@
 
 namespace app\Models;
 
-class User
+class User extends Model
 {   
-    public function teste() {
-        return 'teste user';
-    }
+    public string $table = 'users';
 }

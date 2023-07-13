@@ -1,14 +1,11 @@
 <?php
 declare(strict_types=1);
 
-header('Content-Type:application/json');
+/* header('Content-Type:application/json'); */
 
 include '../vendor/autoload.php';
 
-use app\Classes\Abajur;
-use app\Classes\Book;
-use app\Classes\Login;
-use app\Classes\Product;
+use app\Classes\User;
 
 /* try {
     $login = new Login;
@@ -17,7 +14,7 @@ use app\Classes\Product;
     var_dump($tc->getMessage());
 } */
 
-$book = new Book;
+/* $book = new Book;
 $book->name = 'Um dia especial';
 $book->description = 'Sint molestias assumenda excepturi';
 $book->pages = 500;
@@ -32,7 +29,8 @@ $abajur->isOn = true;
 
 
 echo json_encode($abajur->abajur());
+ */
 
+$user = new User;
 
-
-
+echo $user->info();

@@ -2,7 +2,7 @@
 
 namespace app\Models;
 
-class Product
+class Product extends Model
 {
-    
+    public string $table = 'products';
 }
