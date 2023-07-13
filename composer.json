@@ -1,0 +1,24 @@
+{
+    "name": "user/php",
+    "autoload": {
+        "psr-4": {
+            "User\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gierdiaz",
+            "email": "gierdiaz@hotmail.com"
+        }
+    ],
+    "require": {
+
+       
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "app\\":"app"
+       }
+    }
+}
