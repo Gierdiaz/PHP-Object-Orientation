@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 include '../vendor/autoload.php';
 
-use app\Classes\User;
+
 
 /* try {
     $login = new Login;
@@ -32,7 +32,7 @@ echo json_encode($abajur->abajur());
  */
 
 
-//construct na classe pai e filha
+/* //1 - construct na classe pai e filha
 class User1 {
     public function __construct(public string $name, public int $age)
     {
@@ -54,4 +54,49 @@ class User2 extends User1 {
 
 $user = new User2('name', 0);
 
-echo $user->getUserInfo();
+echo $user->getUserInfo(); */
+
+
+/* //2 - Método estático
+class User1 {
+    public static string $name;
+
+    public static function userInfo() {
+        //méthodo estático não tem acesso ao $this porque ele é o próprio objeto.
+        return "teste método estático ";
+    }
+}
+
+User1::$name = 'Usuário';
+
+//não precisa instanciar método estático
+echo User1::userInfo();
+echo User1::$name; */
+
+
+/* class Father 
+{
+    public static function info() {
+        return __CLASS__;
+    }
+
+    public function test() {
+        return self::info();
+    }
+}
+
+class Daughter extends Father 
+{
+    public static function info() {
+        return __CLASS__;
+    }
+}
+ */
+
+use app\Classes\Father;
+use app\Classes\Daughter;
+
+echo Father::info();
+
+$daughter = new Daughter;
+echo $daughter->test();
