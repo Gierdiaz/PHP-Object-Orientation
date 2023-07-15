@@ -9,4 +9,3 @@ class Daughter extends Father
     }
 }
 
-//echo Father::info();
