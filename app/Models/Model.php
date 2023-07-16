@@ -2,22 +2,19 @@
 
 namespace app\Models;
 
-class Model
+//classes abstratas não podem ser instanciadas
+//como uma classe abstrada não pode ser instanciada ela será extendida para as classes filhas
+abstract class Model   
 {
-    //esse '$this->table' virá lá da classe filha
     public function all() {
-        return "Listando os dados da tabela {$this->table}";
-    }
-
-    public function findBy() {
-
-    }
-
-    public function delete() {
-        return "Deletando os dados ta tabela {$this->table}";
+        return 'all';
     }
 
     public function update() {
+        return 'update';
+    }
 
+    public function delete() {
+        return 'delete';
     }
 }
