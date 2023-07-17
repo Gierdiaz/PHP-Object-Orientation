@@ -5,39 +5,38 @@ declare(strict_types=1);
 
 include '../vendor/autoload.php';
 
-interface CartInterface {
-
-    public function add($product);
-
-    public function remove($product);
-
-    public function quantity($product);
-
-    public function clear();
-
-    public function cart();
+/* abstract class Checkout {
+    abstract public function pay($payment): array;
 }
 
-class Cart implements CartInterface {
 
-    public function add($product) {
-        
-    }
+class PaypalCheckout extends Checkout {
 
-    public function remove($product) {
-        
-    }
-
-    public function quantity($product) {
-        
-    }
-
-    public function clear() {
-        
-    }
-
-    public function cart() {
-        
+    public function pay ($payment): array {
+        return [];
     }
 }
 
+class PagseguroCheckout extends Checkout {
+    public function pay($payment): array {
+        return [];
+    }
+}
+
+$paypalCheckout = new PaypalCheckout;
+$paypalCheckout->pay(''); */
+
+
+class Test 
+{
+    public function methodTest() {
+        throw new Exception('Error test');
+    }
+}
+
+try {
+    $test = new Test;
+    $test->methodTest();
+}catch(Exception $e) {
+    var_dump($e->getCode());
+}
